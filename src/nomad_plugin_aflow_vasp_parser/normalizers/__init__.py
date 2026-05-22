@@ -2,16 +2,16 @@ from nomad.config.models.plugins import NormalizerEntryPoint
 from pydantic import Field
 
 
-class NewNormalizerEntryPoint(NormalizerEntryPoint):
+class AflowVaspNormalizerEntryPoint(NormalizerEntryPoint):
     parameter: int = Field(0, description='Custom configuration parameter')
 
     def load(self):
-        from nomad_plugin_aflow_vasp_parser.normalizers.normalizer import NewNormalizer
+        from nomad_plugin_aflow_vasp_parser.normalizers.normalizer import AflowVaspNormalizer
 
-        return NewNormalizer(**self.model_dump())
+        return AflowVaspNormalizer(**self.model_dump())
 
 
-normalizer_entry_point = NewNormalizerEntryPoint(
-    name='NewNormalizer',
-    description='New normalizer entry point configuration.',
+aflow_vasp_normalizer_entry_point = AflowVaspNormalizerEntryPoint(
+    name='AFLOW_VASP_Normalizer',
+    description='Normalizer for AFLOW entry point to enrich with VASP data.',
 )
