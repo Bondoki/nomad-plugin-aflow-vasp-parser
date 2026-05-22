@@ -130,7 +130,7 @@ where = ["src"]
 [project.entry-points.'nomad.plugin']
 # parser_entry_point = "nomad_plugin_aflow_vasp_parser.parsers:parser_entry_point"
 
-aflow_vasp_normalizer_entry_point = "nomad_plugin_aflow_vasp_parser.normalizers:normalizer_entry_point"
+aflow_vasp_normalizer_entry_point = "nomad_plugin_aflow_vasp_parser.normalizers:aflow_vasp_normalizer_entry_point"
 
 
 

@@ -14,7 +14,7 @@ from nomad.config import config
 from nomad.normalizing import Normalizer
 
 configuration = config.get_plugin_entry_point(
-    'nomad_plugin_aflow_vasp_parser.normalizers:normalizer_entry_point'
+    'nomad_plugin_aflow_vasp_parser.normalizers:aflow_vasp_normalizer_entry_point'
 )
 
 
